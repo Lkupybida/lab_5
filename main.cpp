@@ -1,9 +1,16 @@
 #include <iostream>
 #include "string.h"
+
 using namespace std;
 
 class Sneakers
 {
+public:
+    friend class SportsShoesShop;
+    Sneakers();
+    ~Sneakers();
+    void getSneaker();
+    void giveSneaker();
 private:
     string brand;
     int size;
@@ -13,12 +20,6 @@ private:
     int numberOfSales;
     string model;
     int price;
-public:
-    friend class SportsShoesShop;
-    Sneakers();
-    ~Sneakers();
-    void getSneaker();
-    void giveSneaker();
 };
 
 Sneakers::Sneakers()
